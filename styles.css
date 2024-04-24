@@ -1,0 +1,30 @@
+*, *::before, *::after{
+    padding: 0px;
+    margin: 0px;
+}
+
+main{
+    background-color: rgb(203, 203, 27);
+
+}
+#containerUsers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    height: 100vh;
+    margin: 15px;
+    
+
+
+
+}
+
+.boxName {
+    background: blueviolet;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
