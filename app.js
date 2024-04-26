@@ -18,36 +18,32 @@
 
 
 
-const btnAPI = document.getElementById('btnAPI');
-btnAPI.addEventListener('click', readUsers);
 
-function readUsers(e){
-    e.preventDefault();
+
+function readUsers() {
+    
 
     //CONSUMO
-
-    
     fetch('https://jsonplaceholder.typicode.com/users')
-    .then((response) =>{
-        return response.json();
-    })
-
-    .then((data) =>{
-        myUsers(data);
-
-    })
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            myUsers(data);
+        });
 }
+readUsers()
 
-function myUsers(data){
-let containerUsers = document.getElementById('containerUsers');
+function myUsers(data) {
+    let containerUsers = document.getElementById('containerUsers');
     
-data.forEach(users => {
+    data.forEach(users => {
         let boxName = document.createElement('div');
         boxName.classList.add('boxName');
-        boxName.textContent = users.name
+        boxName.textContent = users.name;
 
-containerUsers.appendChild(boxName)
-
+        containerUsers.appendChild(boxName);
     });
 }
 
+// Llama a read() para comenzar la carga de datos cuando sea necesario.
